@@ -1,0 +1,6 @@
+<%= simple_form_for @arquivo do |f| %>
+  <%= f.input :caminho_do_arquivo, label_html: { class: 'my_class' } %>
+  <%= f.button :submit, class: "btn btn-success" %>
+	<%= link_to 'Back', arquivos_path, class: "btn btn-secondary" %>
+
+<% end %>

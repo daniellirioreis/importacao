@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_orcamento: MyString
+  data_emissao: MyString
+  data_validade: MyString
+  cpf_emitente: MyString
+  inscest_emitente: MyString
+  nome_emitente: MyString
+  endereco_emitente: MyString
+  bairro_emitente: MyString
+  cidade_emitente: MyString
+  uf_emitente: MyString
+  cep_emitente: MyString
+  telefone_emitente: MyString
+
+two:
+  numero_orcamento: MyString
+  data_emissao: MyString
+  data_validade: MyString
+  cpf_emitente: MyString
+  inscest_emitente: MyString
+  nome_emitente: MyString
+  endereco_emitente: MyString
+  bairro_emitente: MyString
+  cidade_emitente: MyString
+  uf_emitente: MyString
+  cep_emitente: MyString
+  telefone_emitente: MyString

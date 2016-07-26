@@ -1,0 +1,65 @@
+<%= form_for(@orcamento) do |f| %>
+  <% if @orcamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@orcamento.errors.count, "error") %> prohibited this orcamento from being saved:</h2>
+
+      <ul>
+      <% @orcamento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero_orcamento %><br>
+    <%= f.text_field :numero_orcamento %>
+  </div>
+  <div class="field">
+    <%= f.label :data_emissao %><br>
+    <%= f.text_field :data_emissao %>
+  </div>
+  <div class="field">
+    <%= f.label :data_validade %><br>
+    <%= f.text_field :data_validade %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf_emitente %><br>
+    <%= f.text_field :cpf_emitente %>
+  </div>
+  <div class="field">
+    <%= f.label :inscest_emitente %><br>
+    <%= f.text_field :inscest_emitente %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_emitente %><br>
+    <%= f.text_field :nome_emitente %>
+  </div>
+  <div class="field">
+    <%= f.label :endereco_emitente %><br>
+    <%= f.text_field :endereco_emitente %>
+  </div>
+  <div class="field">
+    <%= f.label :bairro_emitente %><br>
+    <%= f.text_field :bairro_emitente %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade_emitente %><br>
+    <%= f.text_field :cidade_emitente %>
+  </div>
+  <div class="field">
+    <%= f.label :uf_emitente %><br>
+    <%= f.text_field :uf_emitente %>
+  </div>
+  <div class="field">
+    <%= f.label :cep_emitente %><br>
+    <%= f.text_field :cep_emitente %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone_emitente %><br>
+    <%= f.text_field :telefone_emitente %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

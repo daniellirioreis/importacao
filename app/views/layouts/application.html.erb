@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ImportacaoXml</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+		<%= link_to "Importação ORC", orcamentos_path, class: "navbar-brand" %>
+    <ul class="nav navbar-nav">
+      <li class="nav-item <%if params[:controller] == 'orcamentos'%>active<%end%>">
+				<%= link_to "Orçamentos", orcamentos_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item <%if params[:controller] == 'arquivos'%>active<%end%>">
+				<%= link_to "Arquivos", arquivos_path, class: "nav-link"  %>				
+      </li>
+    </ul>
+  </nav>
+	<div class="container">
+
+    <div class="starter-template">
+			<br><br><br>	
+			<%= yield %>	
+    </div>
+
+  </div><!-- /.container -->
+</body>
+</html>

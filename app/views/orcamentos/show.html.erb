@@ -1,0 +1,125 @@
+<h4 align="center">Orçamento</h4>
+<table class ="table table-bordered"> 
+	<tr>
+		<td>
+			<strong>Numero:</strong>
+		  <%= @orcamento.numero_orcamento %>		  
+		</td>
+		<td>
+		  <strong>Data Emissão:</strong>
+		  <%= @orcamento.data_emissao %>
+		</td>		
+		<td colspan="5">
+		  <strong>Data Validade:</strong>
+		  <%= @orcamento.data_validade %>
+		</td>				
+	</tr>
+	<tr>
+		<td colspan="6" align='center'>
+			EMITENTE
+		<td>
+	</tr>
+	<tr>	
+		<td>
+			<strong>Cpf:</strong>
+		  <%= @orcamento.cpf_emitente %>		  
+		</td>
+		<td>
+			<strong>Inscest:</strong>
+		  <%= @orcamento.inscest_emitente %>		  
+		</td>
+		<td>
+			<strong>Telefone emitente:</strong>
+		  <%= @orcamento.telefone_emitente %>		  
+		</td>
+		<td colspan="4">
+			<strong>Nome:</strong>
+		  <%= @orcamento.nome_emitente %>		  
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Endereco:</strong>
+		  <%= @orcamento.endereco_emitente %>		  
+		</td>
+		<td>
+			<strong>Bairro:</strong>
+		  <%= @orcamento.bairro_emitente %>		  
+		</td>
+		<td>
+			<strong>Cidade:</strong>
+		  <%= @orcamento.cidade_emitente %>		  
+		</td>
+		<td>
+		  <strong>Uf:</strong>
+		  <%= @orcamento.uf_emitente %>
+		</td>		
+		<td colspan="3">
+		  <strong>Cep:</strong>
+		  <%= @orcamento.cep_emitente %>
+		</td>				
+	</tr>
+	<tr>
+		<td colspan="6" align='center'>
+			CLIENTE
+		<td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Cliente:</strong>
+		  <%= @orcamento.nome_cliente %>		  
+		</td>	
+		<td>
+			<strong>CPF/CNPJ:</strong>
+		  <%= @orcamento.cpf_cnpj_cliente %>		  
+		</td>	
+		<td colspan="5">
+			<strong>Inscest:</strong>
+		  <%= @orcamento.inscest_cliente %>		  
+		</td>			
+	</tr>
+	<tr>
+		<td>
+			<strong>Email:</strong>
+		  <%= @orcamento.email_cliente %>		  			
+		</td>
+		<td colspan="6">
+			<strong>Telefone:</strong>
+		  <%= @orcamento.telefone_cliente %>		  						
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Endereço:</strong>
+		  <%= @orcamento.endereco_cliente %>		  
+		</td>					
+		<td>
+			<strong>Bairro:</strong>
+		  <%= @orcamento.bairro_cliente %>		  
+		</td>	
+		<td>
+			<strong>Cidade:</strong>
+		  <%= @orcamento.cidade_cliente %>		  
+		</td>	
+		<td>
+			<strong>UF:</strong>
+		  <%= @orcamento.uf_cliente %>		  
+		</td>	
+		<td colspan="5">
+			<strong>CEP:</strong>
+		  <%= @orcamento.cep_cliente %>		  
+		</td>	
+		
+	</tr>
+	
+</table>
+
+
+
+
+
+
+
+
+<%= link_to 'Edit', edit_orcamento_path(@orcamento) %> |
+<%= link_to 'Back', orcamentos_path %>

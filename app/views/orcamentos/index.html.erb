@@ -1,0 +1,35 @@
+<h4>Listagem Orcamentos</h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Numero orcamento</th>
+      <th>Data emissao</th>
+      <th>Data validade</th>
+      <th>Cpf emitente</th>
+      <th>Inscest emitente</th>
+      <th>Nome emitente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orcamentos.each do |orcamento| %>
+      <tr>
+        <td><%= orcamento.numero_orcamento %></td>
+        <td><%= orcamento.data_emissao %></td>
+        <td><%= orcamento.data_validade %></td>
+        <td><%= orcamento.cpf_emitente %></td>
+        <td><%= orcamento.inscest_emitente %></td>
+        <td><%= orcamento.nome_emitente %></td>
+        <td><%= link_to 'Show', orcamento %></td>
+        <td><%= link_to 'Edit', edit_orcamento_path(orcamento) %></td>
+        <td><%= link_to 'Destroy', orcamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orcamento', new_orcamento_path, class: 'btn btn-success' %>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orcamento xmlns="orçamento" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="orçamento orcamento.xsd ">
+  <numeroorcamento>123456</numeroorcamento>
+  <tipocliente>CLIENTE</tipocliente>
+  <dataemissao>23/09/2014</dataemissao>
+  <datavalidade>30/09/2014</datavalidade>
+  <emitente>
+    <cpfcnpjemitente>00.754.526/0001-67</cpfcnpjemitente>
+    <inscestemitente>186.940563.0060</inscestemitente>
+    <nomeemitente>VEMINAS CAMINHOES LTDA</nomeemitente>
+    <enderecoemitente>PRACA ANTONIO MOURAO GUIMARAES, 100</enderecoemitente>
+    <bairroemitente>CIDADE INDUSTRIAL</bairroemitente>
+    <cidadeemitente>CONTAGEM</cidadeemitente>
+    <ufemitente>MG</ufemitente>
+    <cepemitente>32210-170</cepemitente>
+    <telefoneemitente>(31)33699068</telefoneemitente>
+  </emitente>
+  <cliente>
+    <cpfcnpjcliente>00.754.526/0001-67</cpfcnpjcliente>
+    <inscestcliente>186.940563.0060</inscestcliente>
+    <nomecliente>VEMINAS CAMINHOES LTDA</nomecliente>
+    <enderecocliente>PRACA ANTONIO MOURAO GUIMARAES, 100</enderecocliente>
+    <bairrocliente>CIDADE INDUSTRIAL</bairrocliente>
+    <cidadecliente>CONTAGEM</cidadecliente>
+    <ufcliente>MG</ufcliente>
+    <cepcliente>32210-170</cepcliente>
+    <telefonecliente>(31)33699068</telefonecliente>
+    <emailcliente>veminas@veminas.com.br</emailcliente>
+  </cliente>
+  <produto>
+    <seqproduto1>001</seqproduto1>
+    <detproduto1>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto1>
+    <seqproduto2>002</seqproduto2>
+    <detproduto2>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto2>
+    <seqproduto3>003</seqproduto3>
+    <detproduto3>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto3>
+    <seqproduto4>004</seqproduto4>
+    <detproduto4>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto4>
+    <seqproduto5>005</seqproduto5>
+    <detproduto5>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto5>
+    <seqproduto6>006</seqproduto6>
+    <detproduto6>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto6>
+    <seqproduto7>007</seqproduto7>
+    <detproduto7>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto7>
+    <seqproduto8>008</seqproduto8>
+    <detproduto8>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto8>
+    <seqproduto9>009</seqproduto9>
+    <detproduto9>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto9>
+    <seqproduto10>010</seqproduto10>
+    <detproduto10>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto10>
+    <seqproduto11>011</seqproduto11>
+    <detproduto11>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto11>
+    <seqproduto12>012</seqproduto12>
+    <detproduto12>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto12>
+    <seqproduto13>013</seqproduto13>
+    <detproduto13>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto13>
+    <seqproduto14>014</seqproduto14>
+    <detproduto14>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto14>
+    <seqproduto15>015</seqproduto15>
+    <detproduto15>  *        1,00   1234/12345678/12/123    MOTOR                                       01   7                    100,00                   100,00</detproduto15>
+  </produto>
+  <servico>
+    <seqservico1>001</seqservico1>
+    <detservico1>      1,00       12345678   SERVICO                                                             01   7                    100,00                   100,00</detservico1>
+    <seqservico2>002</seqservico2>
+    <detservico2>      1,00       12345678   SERVICO                                                             01   7                    100,00                   100,00</detservico2>
+    <seqservico3>003</seqservico3>
+    <detservico3>      1,00       12345678   SERVICO                                                             01   7                    100,00                   100,00</detservico3>
+    <seqservico4>004</seqservico4>
+    <detservico4>      1,00       12345678   SERVICO                                                             01   7                    100,00                   100,00</detservico4>
+    <seqservico5>005</seqservico5>
+    <detservico5>      1,00       12345678   SERVICO                                                             01   7                    100,00                   100,00</detservico5>
+    <seqservico6>006</seqservico6>
+    <detservico6>      1,00       12345678   SERVICO                                                             01   7                    100,00                   100,00</detservico6>
+    <seqservico7>007</seqservico7>
+    <detservico7>      1,00       12345678   SERVICO                                                             01   7                    100,00                   100,00</detservico7>
+    <seqservico8>008</seqservico8>
+    <detservico8>      1,00       12345678   SERVICO                                                             01   7                    100,00                   100,00</detservico8>
+  </servico>
+  <totalorcamento>      1.150,00</totalorcamento>
+  <operacaoorcamento>
+    <codoperorcamento>22</codoperorcamento>
+    <descoperorcamento>ORCAMENTO</descoperorcamento>
+  </operacaoorcamento>
+  <placaorcamento>ABC1234</placaorcamento>
+  <vendedororcamento>
+    <codvendorcamento>01</codvendorcamento>
+    <descvendorcamento>GERENCIA</descvendorcamento>
+  </vendedororcamento>
+  <anomodeloorcamento>2014/2015</anomodeloorcamento>
+  <kmsorcamento>123456</kmsorcamento>
+  <chassiorcamento>9BWZ12345678910</chassiorcamento>
+  <deptoorcamento>
+    <coddeptoorcamento>04</coddeptoorcamento>
+    <descdeptoorcamento>ASSIST. TECNICA</descdeptoorcamento>
+  </deptoorcamento>
+  <publicoorcamento>
+    <codpublicoorcamento>01</codpublicoorcamento>
+    <descpublicoorcamento>OFICINA</descpublicoorcamento>
+  </publicoorcamento>
+  <pagamentoorcamento>
+    <codpagtoorcamento>01</codpagtoorcamento>
+    <descpagtoorcamento>A VISTA</descpagtoorcamento>
+  </pagamentoorcamento>
+</orcamento>

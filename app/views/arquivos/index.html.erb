@@ -1,0 +1,25 @@
+<h4>Listing Arquivos</h4>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Caminho do arquivo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arquivos.each do |arquivo| %>
+      <tr>
+        <td><%= arquivo.caminho_do_arquivo %></td>
+        <td><%= link_to 'Show', arquivo %></td>
+        <td><%= link_to 'Edit', edit_arquivo_path(arquivo) %></td>
+        <td><%= link_to 'Destroy', arquivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Arquivo', new_arquivo_path, class: "btn btn-success"%>

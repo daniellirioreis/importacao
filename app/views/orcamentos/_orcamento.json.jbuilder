@@ -1,0 +1,2 @@
+json.extract! orcamento, :id, :numero_orcamento, :data_emissao, :data_validade, :cpf_emitente, :inscest_emitente, :nome_emitente, :endereco_emitente, :bairro_emitente, :cidade_emitente, :uf_emitente, :cep_emitente, :telefone_emitente, :created_at, :updated_at
+json.url orcamento_url(orcamento, format: :json)
