@@ -1,13 +1,18 @@
 require 'nokogiri'
 class Arquivo < ActiveRecord::Base
-
-  before_save :criar_orcamento
+  
+  has_one :orcamento
+  
+  mount_uploader :xml, XmlUploader
+  
+  after_save :criar_orcamento
   
   def criar_orcamento
-    
-    arquivo = Nokogiri::XML(File.open("#{caminho_do_arquivo}"))
+     
+    arquivo = Nokogiri::XML(File.open(xml.file.file))
     
     orcamento = Orcamento.new
+    orcamento.arquivo_id = self.id
     orcamento.numero_orcamento = arquivo.css("numeroorcamento").text
     orcamento.data_emissao = arquivo.css("dataemissao").text 
     orcamento.data_validade = arquivo.css("datavalidade").text
@@ -32,7 +37,22 @@ class Arquivo < ActiveRecord::Base
      orcamento.cep_cliente = arquivo.css("cepcliente").text
      orcamento.telefone_cliente = arquivo.css("telefonecliente").text
      orcamento.email_cliente = arquivo.css("emailcliente").text 
+    
      if orcamento.save!
+         arquivo.css("produto").each do |p| 
+           op = OrcamentoProduto.new
+           op.orcamento_id = orcamento.id           
+           op.sequencia = p.children.css("sequenciaProd").text
+           op.quant = p.children.css("quantidadeProd").text
+           op.descricao = p.children.css("descricaoProd").text
+           op.vend_prod = p.children.css("vendProd").text
+           op.cf = p.children.css("CFProd").text
+           op.valor_unit = p.children.css("vlrUnitProd").text
+           op.valor_total = p.children.css("vlrTotalProd").text
+            if op.save!
+            else
+            end
+         end
      else
      end
   end

@@ -28,7 +28,7 @@ class ArquivosController < ApplicationController
 
     respond_to do |format|
       if @arquivo.save
-        format.html { redirect_to @arquivo, notice: 'Arquivo was successfully created.' }
+        format.html { redirect_to @arquivo.orcamento, notice: 'Orçamento importado com sucesso.' }
         format.json { render :show, status: :created, location: @arquivo }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class ArquivosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def arquivo_params
-      params.require(:arquivo).permit(:caminho_do_arquivo)
+      params.require(:arquivo).permit(:caminho_do_arquivo, :xml)
     end
 end

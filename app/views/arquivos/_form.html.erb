@@ -1,5 +1,6 @@
-<%= simple_form_for @arquivo do |f| %>
-  <%= f.input :caminho_do_arquivo, label_html: { class: 'my_class' } %>
+<%= simple_form_for @arquivo, :html => { :multipart => true }  do |f| %>
+	<%= f.file_field :xml, input_html:{class: 'span2'} %>			
+	<br><br>
   <%= f.button :submit, class: "btn btn-success" %>
 	<%= link_to 'Back', arquivos_path, class: "btn btn-secondary" %>
 

@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.0'
 gem  'nokogiri'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'simple_form'
+gem "carrierwave"
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 

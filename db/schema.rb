@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726014805) do
+ActiveRecord::Schema.define(version: 20160726185216) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,27 @@ ActiveRecord::Schema.define(version: 20160726014805) do
     t.string   "caminho_do_arquivo"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.string   "arquivo"
+    t.string   "xml"
+    t.integer  "orcamento_id"
   end
+
+  add_index "arquivos", ["orcamento_id"], name: "index_arquivos_on_orcamento_id", using: :btree
+
+  create_table "orcamento_produtos", force: :cascade do |t|
+    t.integer  "orcamento_id"
+    t.string   "sequencia"
+    t.string   "quant"
+    t.string   "descricao"
+    t.string   "vend_prod"
+    t.string   "cf"
+    t.string   "valor_unit"
+    t.string   "valor_total"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "orcamento_produtos", ["orcamento_id"], name: "index_orcamento_produtos_on_orcamento_id", using: :btree
 
   create_table "orcamentos", force: :cascade do |t|
     t.string   "numero_orcamento"
@@ -47,6 +67,12 @@ ActiveRecord::Schema.define(version: 20160726014805) do
     t.string   "cep_cliente"
     t.string   "telefone_cliente"
     t.string   "email_cliente"
+    t.integer  "arquivo_id"
   end
 
+  add_index "orcamentos", ["arquivo_id"], name: "index_orcamentos_on_arquivo_id", using: :btree
+
+  add_foreign_key "arquivos", "orcamentos"
+  add_foreign_key "orcamento_produtos", "orcamentos"
+  add_foreign_key "orcamentos", "arquivos"
 end

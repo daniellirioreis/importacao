@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <h4 align="center">Orçamento</h4>
 <table class ="table table-bordered"> 
 	<tr>
@@ -108,12 +109,60 @@
 		<td colspan="5">
 			<strong>CEP:</strong>
 		  <%= @orcamento.cep_cliente %>		  
-		</td>	
-		
+		</td>			
 	</tr>
-	
 </table>
-
+<h4 align='center'>Produtos</h4>
+<table class='table table-bordered'>
+	<tr>
+		<th>
+			Seq.
+		</th>
+		<th>
+			Descrição
+		</th>
+		<th>
+			Quant.
+		</th>
+		<th>
+			Vend
+		</th>
+		<th>
+			CF
+		</th>
+		<th>
+			Valor Unitário
+		</th>
+		<th>
+			Valor Total
+		</th>		
+	</tr>
+	<% @orcamento.produtos.each do |p|%>
+		<tr>
+			<td>
+				<%= p.sequencia %>
+			</td>
+			<td>
+				<%= p.descricao %>
+			</td>
+			<td>
+				<%= p.quant %>
+			</td>
+			<td>
+				<%= p.vend_prod %>
+			</td>
+			<td>
+				<%= p.cf %>
+			</td>
+			<td>
+				<%= p.valor_unit%>
+			</td>
+			<td>
+				<%= p.valor_total%>
+			</td>
+		</tr>
+	<% end %>		
+</table>
 
 
 
