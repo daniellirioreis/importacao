@@ -22,10 +22,7 @@ ActiveRecord::Schema.define(version: 20160726185216) do
     t.datetime "updated_at",         null: false
     t.string   "arquivo"
     t.string   "xml"
-    t.integer  "orcamento_id"
   end
-
-  add_index "arquivos", ["orcamento_id"], name: "index_arquivos_on_orcamento_id", using: :btree
 
   create_table "orcamento_produtos", force: :cascade do |t|
     t.integer  "orcamento_id"
@@ -72,7 +69,6 @@ ActiveRecord::Schema.define(version: 20160726185216) do
 
   add_index "orcamentos", ["arquivo_id"], name: "index_orcamentos_on_arquivo_id", using: :btree
 
-  add_foreign_key "arquivos", "orcamentos"
   add_foreign_key "orcamento_produtos", "orcamentos"
   add_foreign_key "orcamentos", "arquivos"
 end
