@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <h4 align="center">Orçamento</h4>
-<table class ="table table-bordered"> 
+<table class ="table table-sm table-bordered"> 
 	<tr>
 		<td>
 			<strong>Numero:</strong>
@@ -113,7 +113,8 @@
 	</tr>
 </table>
 <h4 align='center'>Produtos</h4>
-<table class='table table-bordered'>
+<% contador = 0%>
+<table class='table table-sm table-bordered'>
 	<tr>
 		<th>
 			Seq.
@@ -137,10 +138,11 @@
 			Valor Total
 		</th>		
 	</tr>
-	<% @orcamento.produtos.each do |p|%>
+	<% @orcamento.produtos.sorted.each do | p|%>
+	<% contador = contador + 1 %>	
 		<tr>
 			<td>
-				<%= p.sequencia %>
+				<%= contador%>
 			</td>
 			<td>
 				<%= p.descricao %>
@@ -163,12 +165,101 @@
 		</tr>
 	<% end %>		
 </table>
+<% contador = 0 %>
+<h4 align='center'>Serviços</h4>
+<table class='table  table-sm table-bordered'>
+	<tr>
+		<th>
+			Seq.
+		</th>
+		<th>
+			Descrição
+		</th>
+		<th>
+			Quant.			
+		</th>		
+		<th>
+			Produtivo
+		</th>
+		<th>
+			CF
+		</th>
+		<th>
+			Valor Unitário
+		</th>
+		<th>
+			Valor Total
+		</th>		
+	</tr>
+	<% @orcamento.servicos.sorted.each do |s|%>
+	<% contador = contador + 1 %>		
+		<tr>
+			<td>
+				<%= contador %>
+			</td>
+			<td>
+				<%= s.descricao %>								
+			</td>
+			<td>
+				<%= s.quant %>
+			</td>
+			<td>
+				<%= s.produtivo%>
+			</td>
+			<td>
+				<%= s.cf %>
+			</td>
+			<td>
+				<%= s.valor_unit%>
+			</td>
+			<td>
+				<%= s.valor_total%>
+			</td>
+		</tr>
+	<% end %>		
+</table>
 
+<table class ="table table-sm table-bordered"> 
+	<tr>
+		<td>
+			<strong>Valor Total:</strong><%= @orcamento.vlr_total%>
+		</td>
+		<td colspan="3">
+			<strong>Operação:</strong> <%= @orcamento.cod_oper %> - <%= @orcamento.desc_oper%>
+		</td>		
+		<tr>
+			<td>
+				<strong>Vendedor:</strong> <%= @orcamento.cod_vendedor%> - <%= @orcamento.nome_vendedor%>
+			</td>
+			<td colspan="3">
+				<strong>Departamento:</strong> <%= @orcamento.cod_departamento%> - <%= @orcamento.nome_departamento%>
+			</td>			
+		</tr>
+		<tr>
+			<td>
+				<strong>Placa:</strong> <%= @orcamento.placa%>
+			</td>
+			<td>
+				<strong>Chassi:</strong> <%= @orcamento.chassi%>
+			</td>
+			<td>
+				<strong>Ano/Modelo:</strong> <%= @orcamento.ano_modelo%>
+			</td>			
+			<td>
+				<strong>KMs Rodados:</strong> <%= @orcamento.km_rodado%>
+			</td>			
+		</tr>
+		<tr>
+			<td>
+				<strong>Público:</strong> <%= @orcamento.cod_publico%> - <%= @orcamento.nome_publico%>
+			</td>
+			<td colspan="3">
+				<strong>Forma de Pagamento:</strong> <%= @orcamento.cod_pagamento%> - <%= @orcamento.desc_pagamento %>
+			</td>
+		</tr>
+		
+</table>
 
-
-
-
-
-
-<%= link_to 'Edit', edit_orcamento_path(@orcamento) %> |
-<%= link_to 'Back', orcamentos_path %>
+<br>
+<%= link_to 'Nova Importação', new_arquivo_path, class: "btn btn-success" %>
+<br><br>

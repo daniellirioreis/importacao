@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  orcamento_id: 
+  sequencia: MyString
+  quant: MyString
+  descricao: MyString
+  produtivo: MyString
+  cf: MyString
+  valor_unit: MyString
+  valor_total: MyString
+
+two:
+  orcamento_id: 
+  sequencia: MyString
+  quant: MyString
+  descricao: MyString
+  produtivo: MyString
+  cf: MyString
+  valor_unit: MyString
+  valor_total: MyString

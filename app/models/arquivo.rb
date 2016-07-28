@@ -10,7 +10,6 @@ class Arquivo < ActiveRecord::Base
   def criar_orcamento
      
     arquivo = Nokogiri::XML(File.open(xml.file.file))
-    
     orcamento = Orcamento.new
     orcamento.arquivo_id = self.id
     orcamento.numero_orcamento = arquivo.css("numeroorcamento").text
@@ -37,7 +36,26 @@ class Arquivo < ActiveRecord::Base
      orcamento.cep_cliente = arquivo.css("cepcliente").text
      orcamento.telefone_cliente = arquivo.css("telefonecliente").text
      orcamento.email_cliente = arquivo.css("emailcliente").text 
-    
+     #rodape
+      orcamento.vlr_total =  arquivo.css("totalorcamento").text
+      orcamento.cod_oper = arquivo.css("codoperorcamento").text 
+      orcamento.desc_oper= arquivo.css("descoperorcamento").text 
+      orcamento.placa = arquivo.css("placaorcamento").text 
+      orcamento.cod_vendedor = arquivo.css("codvendorcamento").text 
+      orcamento.nome_vendedor = arquivo.css("descvendorcamento").text 
+      orcamento.ano_modelo = arquivo.css("anomodeloorcamento").text 
+      orcamento.km_rodado = arquivo.css("kmsorcamento").text 
+      orcamento.chassi = arquivo.css("chassiorcamento").text 
+      orcamento.cod_departamento = arquivo.css("coddeptoorcamento").text 
+      orcamento.nome_departamento = arquivo.css("descdeptoorcamento")
+      orcamento.cod_publico = arquivo.css("codpublicoorcamento").text 
+      orcamento.nome_publico = arquivo.css("descpublicoorcamento").text 
+      orcamento.cod_pagamento = arquivo.css("codpagtoorcamento").text 
+      orcamento.desc_pagamento = arquivo.css("descpagtoorcamento").text 
+     
+     
+     
+      
      if orcamento.save!
          arquivo.css("produto").each do |p| 
            op = OrcamentoProduto.new
@@ -53,6 +71,22 @@ class Arquivo < ActiveRecord::Base
             else
             end
          end
+         
+         arquivo.css("servico").each do |s|
+           ss = OrcamentoServico.new 
+           ss.orcamento_id = orcamento.id
+           ss.sequencia = s.children.css("sequenciaServ").text
+           ss.quant = s.children.css("quantidadeServ").text
+           ss.descricao =  s.children.css("descricaoServ").text
+           ss.produtivo =  s.children.css("produtivo").text
+           ss.cf =  s.children.css("CFServ").text
+           ss.valor_unit =  s.children.css("vlrUnitServ").text
+           ss.valor_total =  s.children.css("vlrTotalServ").text           
+           if ss.save!
+           else
+           end
+         end
+         
      else
      end
   end
